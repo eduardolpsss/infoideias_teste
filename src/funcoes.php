@@ -1,5 +1,4 @@
 <!-- 1ª Fase - Seleção Programador PHP FULL STACK - Eduardo Luiz Pontes de Souza -->
-
 <?php
 
 namespace SRC;
@@ -15,12 +14,54 @@ class Funcoes
 	Ano 1905 = século 20
 	Ano 1700 = século 17
 
-     * */
-    public function SeculoAno(int $ano): int {
+    */
+    public function SeculoAno(int $ano = 2004): int {
+        if ($ano > 1 && $ano <= 101) {
+        echo "1";
+        } elseif ($ano > 102 && $ano <= 201) {
+        echo "2";
+        } elseif ($ano > 202 && $ano <= 301) {
+        echo "3";
+        } elseif ($ano > 302 && $ano <= 401) {
+        echo "4";
+        } elseif ($ano > 402 && $ano <= 501) {
+        echo "5";
+        } elseif ($ano > 502 && $ano <= 601) {
+        echo "6";
+        } elseif ($ano > 602 && $ano <= 701) {
+        echo "7";
+        } elseif ($ano > 702 && $ano <= 801) {
+        echo "8";
+        } elseif ($ano > 802 && $ano <= 901) {
+        echo "9";
+        } elseif ($ano > 902 && $ano <= 1001) {
+        echo "10";
+        } elseif ($ano > 1002 && $ano <= 1101) {
+        echo "11";
+        } elseif ($ano > 1102 && $ano <= 1201) {
+        echo "12";
+        } elseif ($ano > 1202 && $ano <= 1301) {
+        echo "13";
+        } elseif ($ano > 1302 && $ano <= 1401) {
+        echo "14";
+        } elseif ($ano > 1402 && $ano <= 1501) {
+        echo "15";
+        } elseif ($ano > 1502 && $ano <= 1601) {
+        echo "16";
+        } elseif ($ano > 1602 && $ano <= 1701) {
+        echo "17";
+        } elseif ($ano > 1702 && $ano <= 1801) {
+        echo "18";
+        } elseif ($ano > 1802 && $ano <= 1901) {
+        echo "19";
+        } elseif ($ano > 1902 && $ano <= 2001) {
+        echo "20";
+        } elseif ($ano > 2002 && $ano <= 2101) {
+        echo "21";
+        }
         
+        return $ano;
     }
-
-    
 	
 	
 	
@@ -37,10 +78,10 @@ class Funcoes
     Numero = 10 resposta = 7
     Número = 29 resposta = 23
 
-     * */
-    public function PrimoAnterior(int $numero): int {
+    */
+    // public function PrimoAnterior(int $numero): int {
         
-    }
+    // }
 
 
 
@@ -67,9 +108,9 @@ class Funcoes
 	resposta = 25
 
      * */
-    public function SegundoMaior(array $arr): int {
+    // public function SegundoMaior(array $arr): int {
         
-    }
+    // }
 	
 	
 	
@@ -108,7 +149,12 @@ class Funcoes
 
      * */
     
-	public function SequenciaCrescente(array $arr): boolean {
+	// public function SequenciaCrescente(array $arr): boolean {
         
-    }
+    // }
 }
+
+$func = new Funcoes;
+$func->SeculoAno();
+
+?>
