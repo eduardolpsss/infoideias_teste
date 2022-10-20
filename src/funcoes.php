@@ -124,9 +124,33 @@ class Funcoes
 	resposta = 25
 
      * */
-    // public function SegundoMaior(array $arr): int {
+    public function SegundoMaior($arr): int {
 
-    // }
+        $arrayMultidimensional = array (
+            array("A" => 25, "B" => 22, "C" => 18),
+            array("A" => 10, "B" => 15, "C" => 13),
+            array("A" => 24, "B" => 5, "C" => 2),
+            array("A" => 80, "B" => 17, "C" => 15)
+        );
+
+        krsort($arrayMultidimensional);
+        
+        print_r($arrayMultidimensional);
+        
+        echo "<br/><br/>";
+
+        foreach ($arrayMultidimensional as $arrayMultidimensional) {
+            echo ($arrayMultidimensional['A']."<br/>".$arrayMultidimensional['B']."<br/>".$arrayMultidimensional['C']."<br/>");  
+        }
+        
+        echo "<br/><br/>";
+        
+
+        echo "O segundo maior valor é: ".max($arrayMultidimensional);
+        
+
+        return 0;
+    }
 
     /*
    Desenvolva uma função que receba como parâmetro um array de números inteiros e responda com TRUE or FALSE se é possível obter uma sequencia crescente removendo apenas um elemento do array.
@@ -166,5 +190,6 @@ class Funcoes
 $func = new Funcoes;
 $func->SeculoAno();
 $func->PrimoAnterior();
+$func->SegundoMaior(array());
 
 ?>
