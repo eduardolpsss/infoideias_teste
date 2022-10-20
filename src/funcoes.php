@@ -1,4 +1,3 @@
-<!-- 1ª Fase - Seleção Programador PHP FULL STACK - Eduardo Luiz Pontes de Souza -->
 <?php
 
 namespace SRC;
@@ -59,16 +58,10 @@ class Funcoes
         } elseif ($ano > 2002 && $ano <= 2101) {
         echo "21";
         }
-        
+
         return $ano;
     }
-	
-	
-	
-	
-	
-	
-	
+
 	/*
 
     Desenvolva uma função que receba como parâmetro um número inteiro e retorne o numero primo imediatamente anterior ao número recebido
@@ -79,18 +72,41 @@ class Funcoes
     Número = 29 resposta = 23
 
     */
-    // public function PrimoAnterior(int $numero): int {
+    public function PrimoAnterior(int $numero = 10): int {
+        $prime = true;
+        $n = $numero;
+        $divisores = 0;
         
-    // }
+        echo "Número inserido: $numero <br /><br />";
 
+        for($count=2; $count<$n; $count++)
+         if($n % $count == 0){
+          echo "Multiplo de $count.<br />";
+          $divisores++;
+        }
+       
+        if($divisores){
+            echo "<br />Não é primo, tem $divisores divisores além de 1 e ele mesmo.";
+        } else{
+            echo "<br />É primo!";
+            $prime = true;
+        }
 
-
-
-
-
-
-
-
+        for($i = $n - 1; $i >= 2; $i--) {
+            $prime = true;
+            for($j = 2; $j <= sqrt($i); $j++ ) {
+                if($i % $j === 0) {
+                    $prime = false;
+                    break;
+                }
+            }
+            if ($prime == true) {
+                echo "<br /><br /> número primo imediatamente anterior ao número recebido: ".$i;
+                return $i;
+            }
+        }
+        return 2;
+    }
 
     /*
 
@@ -109,20 +125,13 @@ class Funcoes
 
      * */
     // public function SegundoMaior(array $arr): int {
-        
+
     // }
-	
-	
-	
-	
-	
-	
-	
 
     /*
    Desenvolva uma função que receba como parâmetro um array de números inteiros e responda com TRUE or FALSE se é possível obter uma sequencia crescente removendo apenas um elemento do array.
 
-	Exemplos para teste 
+	Exemplos para teste
 
 	Obs.:-  É Importante  realizar todos os testes abaixo para garantir o funcionamento correto.
          -  Sequencias com apenas um elemento são consideradas crescentes
@@ -148,13 +157,14 @@ class Funcoes
     [3, 5, 67, 98, 3] true
 
      * */
-    
+
 	// public function SequenciaCrescente(array $arr): boolean {
-        
+
     // }
 }
 
 $func = new Funcoes;
 $func->SeculoAno();
+$func->PrimoAnterior();
 
 ?>
