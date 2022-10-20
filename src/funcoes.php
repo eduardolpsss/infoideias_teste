@@ -59,6 +59,7 @@ class Funcoes
         echo "21";
         }
 
+        echo " é o século referente ao ano de $ano.<br/><br/>";
         return $ano;
     }
 
@@ -101,7 +102,7 @@ class Funcoes
                 }
             }
             if ($prime == true) {
-                echo "<br /><br /> número primo imediatamente anterior ao número recebido: ".$i;
+                echo "<br /><br /> número primo imediatamente anterior ao número recebido é: ".$i."<br/><br/>";
                 return $i;
             }
         }
@@ -123,7 +124,7 @@ class Funcoes
 
 	resposta = 25
 
-     * */
+    */
     public function SegundoMaior($arr): int {
 
         $arrayMultidimensional = array (
@@ -142,13 +143,9 @@ class Funcoes
         foreach ($arrayMultidimensional as $arrayMultidimensional) {
             echo ($arrayMultidimensional['A']."<br/>".$arrayMultidimensional['B']."<br/>".$arrayMultidimensional['C']."<br/>");  
         }
-        
-        echo "<br/><br/>";
-        
 
-        echo "O segundo maior valor é: ".max($arrayMultidimensional);
+        echo "<br/><br/>O segundo maior valor é: ".max($arrayMultidimensional);
         
-
         return 0;
     }
 
